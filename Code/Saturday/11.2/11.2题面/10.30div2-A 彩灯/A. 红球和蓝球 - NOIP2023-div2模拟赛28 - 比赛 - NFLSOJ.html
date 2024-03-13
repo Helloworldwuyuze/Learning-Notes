@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<!-- saved from url=(0051)http://www.nfls.com.cn:10611/contest/1039/problem/1 -->
+<html lang="zh-CN" style="position: fixed; width: 100%; overflow: hidden; "><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=1200">
+    <title>A. 红球和蓝球 - NOIP2023-div2模拟赛28  - 比赛 - NFLSOJ</title>
+    <link href="./A. 红球和蓝球 - NOIP2023-div2模拟赛28 - 比赛 - NFLSOJ_files/semantic.min.css" rel="stylesheet">
+    <link href="./A. 红球和蓝球 - NOIP2023-div2模拟赛28 - 比赛 - NFLSOJ_files/syntect-tomorrow.css" rel="stylesheet">
+    <link href="./A. 红球和蓝球 - NOIP2023-div2模拟赛28 - 比赛 - NFLSOJ_files/style.css" rel="stylesheet">
+    <link href="./A. 红球和蓝球 - NOIP2023-div2模拟赛28 - 比赛 - NFLSOJ_files/morris.css" rel="stylesheet">
+
+      <link href="./A. 红球和蓝球 - NOIP2023-div2模拟赛28 - 比赛 - NFLSOJ_files/fira-mono.css" rel="stylesheet">
+      <link href="./A. 红球和蓝球 - NOIP2023-div2模拟赛28 - 比赛 - NFLSOJ_files/lato.css" rel="stylesheet">
+      <link href="./A. 红球和蓝球 - NOIP2023-div2模拟赛28 - 比赛 - NFLSOJ_files/open-sans.css" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" data-name="vs/editor/editor.main" href="./A. 红球和蓝球 - NOIP2023-div2模拟赛28 - 比赛 - NFLSOJ_files/editor.main.css"><link href="./A. 红球和蓝球 - NOIP2023-div2模拟赛28 - 比赛 - NFLSOJ_files/exo-2.css" rel="stylesheet">
+    
+    <script data-cfasync="false" src="./A. 红球和蓝球 - NOIP2023-div2模拟赛28 - 比赛 - NFLSOJ_files/jquery.min.js.下载"></script>
+    <script>
+      function copyToClip(content) {
+        var textarea = document.createElement('textarea');
+        document.body.appendChild(textarea);
+        textarea.style.position = 'absolute';
+        textarea.style.clip = 'rect(0 0 0 0)';
+        textarea.value = content;
+        textarea.select();
+        document.execCommand('copy', true);
+      }
+    </script>
+    
+<script async="async" type="text/javascript" src="./A. 红球和蓝球 - NOIP2023-div2模拟赛28 - 比赛 - NFLSOJ_files/editor.main.js.下载"></script><script async="async" type="text/javascript" src="./A. 红球和蓝球 - NOIP2023-div2模拟赛28 - 比赛 - NFLSOJ_files/editor.main.nls.js.下载"></script><script async="async" type="text/javascript" src="./A. 红球和蓝球 - NOIP2023-div2模拟赛28 - 比赛 - NFLSOJ_files/monaco-tokenizer.js.下载"></script><script async="async" type="text/javascript" src="./A. 红球和蓝球 - NOIP2023-div2模拟赛28 - 比赛 - NFLSOJ_files/c_cpp.js.下载"></script><script async="async" type="text/javascript" src="./A. 红球和蓝球 - NOIP2023-div2模拟赛28 - 比赛 - NFLSOJ_files/csharp.js.下载"></script><script async="async" type="text/javascript" src="./A. 红球和蓝球 - NOIP2023-div2模拟赛28 - 比赛 - NFLSOJ_files/haskell.js.下载"></script><script async="async" type="text/javascript" src="./A. 红球和蓝球 - NOIP2023-div2模拟赛28 - 比赛 - NFLSOJ_files/java.js.下载"></script><script async="async" type="text/javascript" src="./A. 红球和蓝球 - NOIP2023-div2模拟赛28 - 比赛 - NFLSOJ_files/javascript.js.下载"></script><script async="async" type="text/javascript" src="./A. 红球和蓝球 - NOIP2023-div2模拟赛28 - 比赛 - NFLSOJ_files/pascal.js.下载"></script><script async="async" type="text/javascript" src="./A. 红球和蓝球 - NOIP2023-div2模拟赛28 - 比赛 - NFLSOJ_files/python.js.下载"></script><script async="async" type="text/javascript" src="./A. 红球和蓝球 - NOIP2023-div2模拟赛28 - 比赛 - NFLSOJ_files/ruby.js.下载"></script><style type="text/css" media="screen" class="monaco-colors">.severity-icon.severity-error { background: url("data:image/svg+xml,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M8.58318%202.02842C9.96435%202.16331%2011.2561%202.77279%2012.2383%203.75307C13.3643%204.87923%2013.9978%206.40584%2014%207.99829C14.0004%209.38617%2013.5196%2010.7313%2012.6396%2011.8045C11.7595%2012.8778%2010.5345%2013.6127%209.17333%2013.8841C7.81215%2014.1556%206.39895%2013.9467%205.1745%2013.2931C3.95005%2012.6394%202.99008%2011.5815%202.45814%2010.2995C1.92619%209.0175%201.85517%207.59072%202.25717%206.26222C2.65917%204.93373%203.50933%203.7857%204.66282%203.0137C5.8163%202.24171%207.20177%201.89351%208.58318%202.02842ZM8.68038%201.03316C10.292%201.19055%2011.7993%201.90184%2012.9453%203.04585C14.2587%204.35938%2014.9976%206.14013%2015%207.99764C15.0005%209.61695%2014.4396%2011.1864%2013.4129%2012.4385C12.3861%2013.6907%2010.9569%2014.5482%209.36889%2014.8648C7.78084%2015.1815%206.13211%2014.9378%204.70359%2014.1752C3.27506%2013.4127%202.1551%2012.1784%201.53449%2010.6828C0.913887%209.18708%200.831027%207.52251%201.30003%205.97259C1.76903%204.42268%202.76089%203.08331%204.10662%202.18265C5.45236%201.28199%207.06873%200.875761%208.68038%201.03316ZM5.52498%205L8.00004%207.47506L10.4751%205L11.1822%205.70711L8.70714%208.18217L11.1818%2010.6569L10.4747%2011.364L8.00004%208.88927L5.52535%2011.364L4.81824%2010.6569L7.29293%208.18217L4.81787%205.70711L5.52498%205Z%22%20fill%3D%22%23a1260d%22%2F%3E%3C%2Fsvg%3E") center center no-repeat; height: 16px; width: 16px; }
+.severity-icon.severity-warning { background: url("data:image/svg+xml,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M14.12%2013.9725L15%2012.5L9.37927%202H7.61924L1.9985%2012.5L2.87852%2013.9725H14.12ZM2.87852%2012.9725L8.49925%202.47249L14.12%2012.9725H2.87852ZM7.98952%206H8.98802V10H7.98952V6ZM7.98952%2011H8.98802V12H7.98952V11Z%22%20fill%3D%22%23ddb100%22%2F%3E%3C%2Fsvg%3E") center center no-repeat; height: 16px; width: 16px; }
+.severity-icon.severity-info { background: url("data:image/svg+xml,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M3%207.5C3%204.46243%205.46243%202%208.5%202C11.5376%202%2014%204.46243%2014%207.5C14%2010.5376%2011.5376%2013%208.5%2013C5.46243%2013%203%2010.5376%203%207.5ZM2%207.5C2%203.91015%204.91015%201%208.5%201C12.0899%201%2015%203.91015%2015%207.5C15%2011.0899%2012.0899%2014%208.5%2014C4.91015%2014%202%2011.0899%202%207.5ZM8%204V5H9V4H8ZM8%206L8%2010H9L9%206H8Z%22%20fill%3D%22%23007acc%22%2F%3E%3C%2Fsvg%3E") center center no-repeat; height: 16px; width: 16px; }
+.severity-icon.severity-ignore { background: url("data:image/svg+xml,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M3%207.5C3%204.46243%205.46243%202%208.5%202C11.5376%202%2014%204.46243%2014%207.5C14%2010.5376%2011.5376%2013%208.5%2013C5.46243%2013%203%2010.5376%203%207.5ZM2%207.5C2%203.91015%204.91015%201%208.5%201C12.0899%201%2015%203.91015%2015%207.5C15%2011.0899%2012.0899%2014%208.5%2014C4.91015%2014%202%2011.0899%202%207.5ZM8%204V5H9V4H8ZM8%206L8%2010H9L9%206H8Z%22%20fill%3D%22%2375beff%22%2F%3E%3C%2Fsvg%3E") center center no-repeat; height: 16px; width: 16px; }
+.monaco-editor .minimap-slider, .monaco-editor .minimap-slider .minimap-slider-horizontal { background: rgba(100, 100, 100, 0.2); }
+.monaco-editor .minimap-slider:hover, .monaco-editor .minimap-slider:hover .minimap-slider-horizontal { background: rgba(100, 100, 100, 0.35); }
+.monaco-editor .minimap-slider.active, .monaco-editor .minimap-slider.active .minimap-slider-horizontal { background: rgba(0, 0, 0, 0.3); }
+.monaco-editor .minimap-shadow-visible { box-shadow: #dddddd -6px 0 6px -6px inset; }
+.monaco-editor .scroll-decoration { box-shadow: #dddddd 0 6px 6px -6px inset; }
+.monaco-editor .focused .selected-text { background-color: #d6d6d6; }
+.monaco-editor .selected-text { background-color: #e5ebf1; }
+.monaco-editor, .monaco-editor-background, .monaco-editor .inputarea.ime-input { background-color: #ffffff; }
+.monaco-editor, .monaco-editor .inputarea.ime-input { color: #4d4d4c; }
+.monaco-editor .margin { background-color: #ffffff; }
+.monaco-editor .rangeHighlight { background-color: rgba(253, 255, 0, 0.2); }
+.vs-whitespace { color: #d1d1d1 !important; }
+.monaco-editor .view-overlays .current-line { background-color: #efefef; }
+.monaco-editor .margin-view-overlays .current-line-margin { background-color: #efefef; border: none; }
+.monaco-editor .lines-content .cigr { box-shadow: 1px 0 0 0 #d3d3d3 inset; }
+.monaco-editor .lines-content .cigra { box-shadow: 1px 0 0 0 #939393 inset; }
+.monaco-editor .line-numbers { color: #237893; }
+.monaco-editor .current-line ~ .line-numbers { color: #0b216f; }
+.monaco-editor .view-ruler { box-shadow: 1px 0 0 0 #d3d3d3 inset; }
+.monaco-editor .cursor { background-color: #aeafad; border-color: #aeafad; color: #515052; }
+.monaco-editor.vs .valueSetReplacement { outline: solid 2px #b9b9b9; }
+.monaco-editor .squiggly-error { background: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%206%203'%20enable-background%3D'new%200%200%206%203'%20height%3D'3'%20width%3D'6'%3E%3Cg%20fill%3D'%23e51400'%3E%3Cpolygon%20points%3D'5.5%2C0%202.5%2C3%201.1%2C3%204.1%2C0'%2F%3E%3Cpolygon%20points%3D'4%2C0%206%2C2%206%2C0.6%205.4%2C0'%2F%3E%3Cpolygon%20points%3D'0%2C2%201%2C3%202.4%2C3%200%2C0.6'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") repeat-x bottom left; }
+.monaco-editor .squiggly-warning { background: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%206%203'%20enable-background%3D'new%200%200%206%203'%20height%3D'3'%20width%3D'6'%3E%3Cg%20fill%3D'%23e9a700'%3E%3Cpolygon%20points%3D'5.5%2C0%202.5%2C3%201.1%2C3%204.1%2C0'%2F%3E%3Cpolygon%20points%3D'4%2C0%206%2C2%206%2C0.6%205.4%2C0'%2F%3E%3Cpolygon%20points%3D'0%2C2%201%2C3%202.4%2C3%200%2C0.6'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") repeat-x bottom left; }
+.monaco-editor .squiggly-info { background: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%206%203'%20enable-background%3D'new%200%200%206%203'%20height%3D'3'%20width%3D'6'%3E%3Cg%20fill%3D'%2375beff'%3E%3Cpolygon%20points%3D'5.5%2C0%202.5%2C3%201.1%2C3%204.1%2C0'%2F%3E%3Cpolygon%20points%3D'4%2C0%206%2C2%206%2C0.6%205.4%2C0'%2F%3E%3Cpolygon%20points%3D'0%2C2%201%2C3%202.4%2C3%200%2C0.6'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") repeat-x bottom left; }
+.monaco-editor .squiggly-hint { background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%223%22%20width%3D%2212%22%3E%3Cg%20fill%3D%22%236c6c6c%22%3E%3Ccircle%20cx%3D%221%22%20cy%3D%221%22%20r%3D%221%22%2F%3E%3Ccircle%20cx%3D%225%22%20cy%3D%221%22%20r%3D%221%22%2F%3E%3Ccircle%20cx%3D%229%22%20cy%3D%221%22%20r%3D%221%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") no-repeat bottom left; }
+.showUnused .monaco-editor .squiggly-inline-unnecessary { opacity: 0.467; }
+.monaco-editor .squiggly-inline-deprecated { text-decoration: line-through; text-decoration-color: #4d4d4c}
+.monaco-diff-editor .diff-review-line-number { color: #237893; }
+.monaco-diff-editor .diff-review-shadow { box-shadow: #dddddd 0 -6px 6px -6px inset; }
+.monaco-editor .line-insert, .monaco-editor .char-insert { background-color: rgba(155, 185, 85, 0.2); }
+.monaco-diff-editor .line-insert, .monaco-diff-editor .char-insert { background-color: rgba(155, 185, 85, 0.2); }
+.monaco-editor .inline-added-margin-view-zone { background-color: rgba(155, 185, 85, 0.2); }
+.monaco-editor .line-delete, .monaco-editor .char-delete { background-color: rgba(255, 0, 0, 0.2); }
+.monaco-diff-editor .line-delete, .monaco-diff-editor .char-delete { background-color: rgba(255, 0, 0, 0.2); }
+.monaco-editor .inline-deleted-margin-view-zone { background-color: rgba(255, 0, 0, 0.2); }
+.monaco-diff-editor.side-by-side .editor.modified { box-shadow: -6px 0 5px -5px #dddddd; }
+.monaco-editor .bracket-match { background-color: rgba(0, 100, 0, 0.1); }
+.monaco-editor .bracket-match { border: 1px solid #b9b9b9; }
+.monaco-editor .codelens-decoration { color: #999999; }
+.monaco-editor .codelens-decoration > a:hover { color: #0000ff !important; }
+.monaco-editor .findOptionsWidget { background-color: #f3f3f3; }
+.monaco-editor .findOptionsWidget { box-shadow: 0 2px 8px #a8a8a8; }
+.monaco-editor .findMatch { background-color: rgba(234, 92, 0, 0.33); }
+.monaco-editor .currentFindMatch { background-color: #a8ac94; }
+.monaco-editor .findScope { background-color: rgba(180, 180, 180, 0.3); }
+.monaco-editor .find-widget { background-color: #f3f3f3; }
+.monaco-editor .find-widget { box-shadow: 0 2px 8px #a8a8a8; }
+.monaco-editor .find-widget { color: #616161; }
+.monaco-editor .find-widget.no-results .matchesCount { color: #a1260d; }
+.monaco-editor .find-widget .monaco-sash { background-color: #c8c8c8; width: 3px !important; margin-left: -4px;}
+.monaco-editor .find-widget .monaco-checkbox .checkbox:checked + .label { border: 1px solid rgba(0, 122, 204, 0); }
+.monaco-editor .find-widget .monaco-checkbox .checkbox:checked + .label { background-color: rgba(0, 122, 204, 0.12); }
+.monaco-workbench .monaco-editor .find-widget .monaco-inputbox.synthetic-focus { outline-color: rgba(0, 122, 204, 0.4); }
+.monaco-editor .detected-link-active { color: #0000ff !important; }
+.monaco-editor .monaco-editor-overlaymessage .anchor { border-top-color: #007acc; }
+.monaco-editor .monaco-editor-overlaymessage .message { border: 1px solid #007acc; }
+.monaco-editor .monaco-editor-overlaymessage .message { background-color: #d6ecf2; }
+.monaco-editor .parameter-hints-widget { border: 1px solid #c8c8c8; }
+.monaco-editor .parameter-hints-widget.multiple .body { border-left: 1px solid rgba(200, 200, 200, 0.5); }
+.monaco-editor .parameter-hints-widget .signature.has-docs { border-bottom: 1px solid rgba(200, 200, 200, 0.5); }
+.monaco-editor .parameter-hints-widget { background-color: #f3f3f3; }
+.monaco-editor .parameter-hints-widget a { color: #006ab1; }
+.monaco-editor .parameter-hints-widget code { background-color: rgba(220, 220, 220, 0.4); }
+.monaco-editor .suggest-widget .monaco-list .monaco-list-row .monaco-highlighted-label .highlight { color: #0066bf; }
+.monaco-editor .suggest-widget { color: #4d4d4c; }
+.monaco-editor .suggest-widget a { color: #006ab1; }
+.monaco-editor .suggest-widget code { background-color: rgba(220, 220, 220, 0.4); }
+.monaco-editor .focused .selectionHighlight { background-color: rgba(173, 214, 255, 0.3); }
+.monaco-editor .selectionHighlight { background-color: rgba(173, 214, 255, 0.15); }
+.monaco-editor .wordHighlight { background-color: rgba(87, 87, 87, 0.25); }
+.monaco-editor .wordHighlightStrong { background-color: rgba(14, 99, 156, 0.25); }
+.monaco-editor .accessibilityHelpWidget { background-color: #f3f3f3; }
+.monaco-editor .accessibilityHelpWidget { color: #616161; }
+.monaco-editor .accessibilityHelpWidget { box-shadow: 0 2px 8px #a8a8a8; }
+.monaco-editor .tokens-inspect-widget { border: 1px solid #c8c8c8; }
+.monaco-editor .tokens-inspect-widget .tokens-inspect-separator { background-color: #c8c8c8; }
+.monaco-editor .tokens-inspect-widget { background-color: #f3f3f3; }
+.monaco-editor .reference-zone-widget .ref-tree .referenceMatch .highlight { background-color: rgba(234, 92, 0, 0.3); }
+.monaco-editor .reference-zone-widget .preview .reference-decoration { background-color: rgba(245, 216, 2, 0.87); }
+.monaco-editor .reference-zone-widget .ref-tree { background-color: #f3f3f3; }
+.monaco-editor .reference-zone-widget .ref-tree { color: #646465; }
+.monaco-editor .reference-zone-widget .ref-tree .reference-file { color: #1e1e1e; }
+.monaco-editor .reference-zone-widget .ref-tree .monaco-list:focus .monaco-list-rows > .monaco-list-row.selected:not(.highlighted) { background-color: rgba(51, 153, 255, 0.2); }
+.monaco-editor .reference-zone-widget .ref-tree .monaco-list:focus .monaco-list-rows > .monaco-list-row.selected:not(.highlighted) { color: #6c6c6c !important; }
+.monaco-editor .reference-zone-widget .preview .monaco-editor .monaco-editor-background,.monaco-editor .reference-zone-widget .preview .monaco-editor .inputarea.ime-input {	background-color: #f2f8fc;}
+.monaco-editor .reference-zone-widget .preview .monaco-editor .margin {	background-color: #f2f8fc;}
+.monaco-editor .goto-definition-link { color: #0000ff !important; }
+.monaco-editor .marker-widget a { color: #006ab1; }
+.monaco-editor .hoverHighlight { background-color: rgba(173, 214, 255, 0.15); }
+.monaco-editor .monaco-editor-hover { background-color: #f3f3f3; }
+.monaco-editor .monaco-editor-hover { border: 1px solid #c8c8c8; }
+.monaco-editor .monaco-editor-hover .hover-row:not(:first-child):not(:empty) { border-top: 1px solid rgba(200, 200, 200, 0.5); }
+.monaco-editor .monaco-editor-hover hr { border-top: 1px solid rgba(200, 200, 200, 0.5); }
+.monaco-editor .monaco-editor-hover hr { border-bottom: 0px solid rgba(200, 200, 200, 0.5); }
+.monaco-editor .monaco-editor-hover a { color: #006ab1; }
+.monaco-editor .monaco-editor-hover .hover-row .actions { background-color: #e7e7e7; }
+.monaco-editor .monaco-editor-hover code { background-color: rgba(220, 220, 220, 0.4); }
+.monaco-editor .snippet-placeholder { background-color: rgba(10, 50, 100, 0.2); outline-color: transparent; }
+.monaco-editor .finish-snippet-placeholder { background-color: transparent; outline-color: rgba(10, 50, 100, 0.5); }
+
+.mtk1 { color: #000000; }
+.mtk2 { color: #fffffe; }
+.mtk3 { color: #808080; }
+.mtk4 { color: #ff0000; }
+.mtk5 { color: #0451a5; }
+.mtk6 { color: #0000ff; }
+.mtk7 { color: #09885a; }
+.mtk8 { color: #008000; }
+.mtk9 { color: #8e908c; }
+.mtk10 { color: #dd0000; }
+.mtk11 { color: #f5871f; }
+.mtk12 { color: #666969; }
+.mtk13 { color: #3e999f; }
+.mtk14 { color: #718c00; }
+.mtk15 { color: #c82829; }
+.mtk16 { color: #383838; }
+.mtk17 { color: #c99e00; }
+.mtk18 { color: #4271ae; }
+.mtk19 { color: #cd3131; }
+.mtk20 { color: #863b00; }
+.mtk21 { color: #8959a8; }
+.mtk22 { color: #af00db; }
+.mtk23 { color: #800000; }
+.mtk24 { color: #373b41; }
+.mtk25 { color: #e0e0e0; }
+.mtk26 { color: #e00000; }
+.mtk27 { color: #3030c0; }
+.mtk28 { color: #666666; }
+.mtk29 { color: #778899; }
+.mtk30 { color: #ff00ff; }
+.mtk31 { color: #a31515; }
+.mtk32 { color: #4f76ac; }
+.mtk33 { color: #008080; }
+.mtk34 { color: #001188; }
+.mtk35 { color: #4864aa; }
+.mtki { font-style: italic; }
+.mtkb { font-weight: bold; }
+.mtku { text-decoration: underline; text-underline-position: under; }</style><style type="text/css" media="screen"></style></head>
+<body style="position: relative; margin-top: 49px; height: calc(100% - 49px); overflow-y: overlay; ">
+    <div class="ui fixed borderless menu" style="position: fixed; height: 49px; ">
+        <div class="ui container">
+            
+            <a class="header item" href="http://www.nfls.com.cn:10611/"><span style="font-family: &#39;Exo 2&#39;; font-size: 1.5em; font-weight: 600; ">NFLSOJ</span></a>
+            
+            <a class="item" href="http://www.nfls.com.cn:10611/"><i class="home icon"></i> 首页</a>
+            <a class="item" href="http://www.nfls.com.cn:10611/problems"><i class="list icon"></i> 题库</a>
+            <a class="item active" href="http://www.nfls.com.cn:10611/contests"><i class="calendar icon"></i> 课程 &amp; 比赛</a>
+            <a class="item" href="http://www.nfls.com.cn:10611/practices"><i class="book icon"></i> 练习</a>
+            <a class="item" href="http://www.nfls.com.cn:10611/submissions"><i class="tasks icon"></i> 评测</a>
+            <a class="item" href="http://www.nfls.com.cn:10611/ranklist"><i class="signal icon"></i> 排名</a>
+            <a class="item" href="http://www.nfls.com.cn:10611/discussion/global"><i class="comments icon"></i> 讨论</a>
+            <a class="item" href="http://www.nfls.com.cn:10611/help"><i class="help circle icon"></i> 帮助</a>
+            
+              <a id="back_to_contest" class="item" href="http://www.nfls.com.cn:10611/contest/1039"><i class="arrow left icon"></i> 返回比赛</a>
+            
+            
+            <div class="right menu">
+              
+              <a href="http://www.nfls.com.cn:10611/user/1255" style="color: inherit; ">
+              </a><div class="ui simple dropdown item"><a href="http://www.nfls.com.cn:10611/user/1255" style="color: inherit; ">
+                zzc <i class="dropdown icon"></i>
+                </a><div class="menu"><a href="http://www.nfls.com.cn:10611/user/1255" style="color: inherit; ">
+                  </a><a class="item" href="http://www.nfls.com.cn:10611/user/1255/edit"><i class="edit icon"></i>修改资料</a>
+                  
+                  <a class="item" href-post="/logout?url=%2Fcontest%2F1039%2Fproblem%2F1"><i class="power icon"></i>注销</a>
+                </div>
+              </div>
+              
+                
+            </div>
+        </div>
+    </div>
+    <div style="margin-top: 28px; ">
+    
+      <div class="ui main container">
+    
+
+<div id="__xx">
+    
+</div>
+
+<style>
+#languages-menu::-webkit-scrollbar, #testcase-menu::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+#languages-menu .item::after, #testcase-menu .item::after {
+    display: none;
+}
+</style>
+
+<script>
+  window.pathLib = "/cdnjs/";
+  window.pathSelfLib = "/self/";
+  
+  var originalConsoleWarn = console.warn;
+  console.warn = function (message) {
+    if (message.startsWith('Duplicate definition of module')) return;
+    originalConsoleWarn.apply(console, arguments);
+  };
+</script>
+
+<!-- Load monaco-editor -->
+<script src="./A. 红球和蓝球 - NOIP2023-div2模拟赛28 - 比赛 - NFLSOJ_files/loader.js.下载"></script>
+<script src="./A. 红球和蓝球 - NOIP2023-div2模拟赛28 - 比赛 - NFLSOJ_files/monaco-editor.js.下载"></script>
+<link rel="stylesheet" href="./A. 红球和蓝球 - NOIP2023-div2模拟赛28 - 比赛 - NFLSOJ_files/monaco-editor.css">
+
+
+
+<div class="ui center aligned grid">
+    <div class="row">
+      <h1 class="ui header">
+        
+          A. 红球和蓝球 
+        
+      </h1>
+    </div>
+    
+      <div class="row" style="margin-top: -15px">
+          <span class="ui label">内存限制：1024 MiB</span>
+          <span class="ui label">时间限制：2000 ms</span>
+          
+            <span class="ui label">输入文件：ball.in</span>
+            <span class="ui label">输出文件：ball.out</span>
+          
+      </div>
+    
+    
+      <div class="row" style="margin-top: -23px">
+          <span class="ui label">题目类型：传统</span>
+          
+              <span class="ui label">评测方式：文本比较</span>
+          
+      </div>
+    
+    
+</div>
+<div class="ui grid">
+  <div class="row">
+    <div class="column">
+      <div class="ui buttons">
+        
+          <a class="small ui primary button" href="http://www.nfls.com.cn:10611/contest/1039/problem/1#submit_code">提交</a>
+        
+        
+
+          <a class="small ui positive button" href="http://www.nfls.com.cn:10611/contest/1039/problem/1#" onclick="__showList()">提交记录</a>
+          <a class="small ui orange button" href="http://www.nfls.com.cn:10611/problem/2278/statistics/fastest">统计</a>
+          
+          <a class="small ui brown button" href="http://www.nfls.com.cn:10611/discussion/problem/2278" style="position: relative; ">
+            讨论
+            
+          </a>
+
+        
+        
+        
+
+<div class="ui modal" id="code_test_modal">
+    <div class="header"> 代码测试 </div>
+    <div class="content">
+        <form class="ui form" enctype="multipart/form-data" method="post" action="http://www.nfls.com.cn:10611/problem/2278/code/test" onsubmit="return on_submit()">
+            <div class="field">
+                <label>语言</label>
+                <select class="ui fluid search dropdown" name="lang" id="lang">
+                    <option value="c++11">c++11</option>
+                    <option value="c++14" selected="">c++14</option>
+                    <option value="c++17">c++17</option>
+                </select>
+            </div>
+            <div class="field">
+                <label>输入样例</label>
+                <input id="input_file" type="file" name="input_file" size="104857760">
+            </div>
+            <div class="field">
+                <label>源代码   <span style="color: red">  需要手动freopen输入输出文件： ball.in / ball.out </span> </label>
+                <textarea name="src" id="src"></textarea>
+            </div>
+            <button class="ui button primary" type="submit" style="float: right;padding-bottom: 10px" id="__submit_button">提交</button>
+        </form>
+        <div style="display: none;margin-top: 60px" id="show_result">
+            <p id="judge_result_span"> </p>
+            <p> 用时：<span style="color: red" id="cpu_time_span">  </span> MS </p>
+            <p> 内存：<span style="color: red" id="memory_span">  </span> MB </p>
+            <p id="error_info"> 错误信息：<br> <span style="color: blue;white-space: pre" id="error_info_span">  </span> </p>
+
+            <div id="output_result" class="ui form">
+                <label for="output">输出:</label> <br>
+                <textarea id="output" rows="3"></textarea>
+            </div>
+        </div>
+        <div style="display: none;margin-top: 60px;color: red" id="show_error"></div>
+        <div style="height: 20px"> </div>
+    </div>
+
+</div>
+
+<script>
+        const show_code_test_modal = ()=> {
+            $("#code_test_modal").modal('show')
+        }
+
+        const on_submit =() => {
+            if($('#src').val().length <= 15) {
+                alert("代码太短")
+                return false
+            }
+            if($('#input_file')[0].files.length === 0) {
+                alert("请上传输入文件")
+                return false
+            }
+            to_submit()
+            return false
+        }
+        const to_submit = () => {
+            let fd = new FormData();
+            fd.append('src', $('#src').val())
+            fd.append('lang', $('#lang option:selected').val())
+            fd.append('input_file', $('#input_file')[0].files[0])
+            $('#__submit_button').text('运行中....')
+            $.ajax({
+                url: '/problem/2278/code/test',
+                type: 'post',
+                data: fd,
+                cache: false,
+                processData: false,
+                contentType: false,
+                success: function (data) {
+                    $('#__submit_button').text('提交')
+                    if(data.not_allowed_error) {
+                        $('#show_result').hide()
+                        $('#show_error').text(data.not_allowed_error).show()
+                        return
+                    } else {
+                        $('#show_error').hide()
+                        $('#show_result').show()
+                    }
+
+                    if(data.error) $('#judge_result_span').text(data.error).css("color", "red")
+                    else $('#judge_result_span').text("运行成功").css("color", "green")
+
+                    $("#cpu_time_span").text(data.cpu_time)
+                    $("#memory_span").text(parseInt(data.memory / (1024 * 1024)))
+
+                    if(data.info !== '') {
+                        $('#error_info').show()
+                        $('#error_info_span').text(data.info.replaceAll("<br>", "\n"))
+                    } else $('#error_info').hide()
+
+                    if(data.output) {
+                        $('#output_result').show()
+                        $('#output').val(data.output)
+                    } else $('#output_result').hide()
+
+                },
+            })
+        }
+
+    </script>
+
+
+
+
+        <a class="small ui blue button" href="javascript:;" onclick="show_code_test_modal()">测试</a>
+        
+
+      </div>
+      
+        <div class="ui buttons right floated">
+          
+          
+        </div>
+      
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="column">
+      <h4 class="ui top attached block header">题目描述</h4>
+        
+       
+            <div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden; transform: translate3d(0, 0, 0); "><p>桌子上有 <svg style="vertical-align: 0" xmlns="http://www.w3.org/2000/svg" width="2.011ex" height="1.545ex" role="img" focusable="false" viewBox="0 -683 889 683" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="MJX-1-TEX-I-1D43E" d="M285 628Q285 635 228 637Q205 637 198 638T191 647Q191 649 193 661Q199 681 203 682Q205 683 214 683H219Q260 681 355 681Q389 681 418 681T463 682T483 682Q500 682 500 674Q500 669 497 660Q496 658 496 654T495 648T493 644T490 641T486 639T479 638T470 637T456 637Q416 636 405 634T387 623L306 305Q307 305 490 449T678 597Q692 611 692 620Q692 635 667 637Q651 637 651 648Q651 650 654 662T659 677Q662 682 676 682Q680 682 711 681T791 680Q814 680 839 681T869 682Q889 682 889 672Q889 650 881 642Q878 637 862 637Q787 632 726 586Q710 576 656 534T556 455L509 418L518 396Q527 374 546 329T581 244Q656 67 661 61Q663 59 666 57Q680 47 717 46H738Q744 38 744 37T741 19Q737 6 731 0H720Q680 3 625 3Q503 3 488 0H478Q472 6 472 9T474 27Q478 40 480 43T491 46H494Q544 46 544 71Q544 75 517 141T485 216L427 354L359 301L291 248L268 155Q245 63 245 58Q245 51 253 49T303 46H334Q340 37 340 35Q340 19 333 5Q328 0 317 0Q314 0 280 1T180 2Q118 2 85 2T49 1Q31 1 31 11Q31 13 34 25Q38 41 42 43T65 46Q92 46 125 49Q139 52 144 61Q147 65 216 339T285 628Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><use data-c="1D43E" xlink:href="#MJX-1-TEX-I-1D43E"></use></g></g></g></svg> 个蓝球和 <svg style="vertical-align: -0.186ex" xmlns="http://www.w3.org/2000/svg" width="6.786ex" height="1.731ex" role="img" focusable="false" viewBox="0 -683 2999.4 765" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="MJX-2-TEX-I-1D441" d="M234 637Q231 637 226 637Q201 637 196 638T191 649Q191 676 202 682Q204 683 299 683Q376 683 387 683T401 677Q612 181 616 168L670 381Q723 592 723 606Q723 633 659 637Q635 637 635 648Q635 650 637 660Q641 676 643 679T653 683Q656 683 684 682T767 680Q817 680 843 681T873 682Q888 682 888 672Q888 650 880 642Q878 637 858 637Q787 633 769 597L620 7Q618 0 599 0Q585 0 582 2Q579 5 453 305L326 604L261 344Q196 88 196 79Q201 46 268 46H278Q284 41 284 38T282 19Q278 6 272 0H259Q228 2 151 2Q123 2 100 2T63 2T46 1Q31 1 31 10Q31 14 34 26T39 40Q41 46 62 46Q130 49 150 85Q154 91 221 362L289 634Q287 635 234 637Z"></path><path id="MJX-2-TEX-N-2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path><path id="MJX-2-TEX-I-1D43E" d="M285 628Q285 635 228 637Q205 637 198 638T191 647Q191 649 193 661Q199 681 203 682Q205 683 214 683H219Q260 681 355 681Q389 681 418 681T463 682T483 682Q500 682 500 674Q500 669 497 660Q496 658 496 654T495 648T493 644T490 641T486 639T479 638T470 637T456 637Q416 636 405 634T387 623L306 305Q307 305 490 449T678 597Q692 611 692 620Q692 635 667 637Q651 637 651 648Q651 650 654 662T659 677Q662 682 676 682Q680 682 711 681T791 680Q814 680 839 681T869 682Q889 682 889 672Q889 650 881 642Q878 637 862 637Q787 632 726 586Q710 576 656 534T556 455L509 418L518 396Q527 374 546 329T581 244Q656 67 661 61Q663 59 666 57Q680 47 717 46H738Q744 38 744 37T741 19Q737 6 731 0H720Q680 3 625 3Q503 3 488 0H478Q472 6 472 9T474 27Q478 40 480 43T491 46H494Q544 46 544 71Q544 75 517 141T485 216L427 354L359 301L291 248L268 155Q245 63 245 58Q245 51 253 49T303 46H334Q340 37 340 35Q340 19 333 5Q328 0 317 0Q314 0 280 1T180 2Q118 2 85 2T49 1Q31 1 31 11Q31 13 34 25Q38 41 42 43T65 46Q92 46 125 49Q139 52 144 61Q147 65 216 339T285 628Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><use data-c="1D441" xlink:href="#MJX-2-TEX-I-1D441"></use></g><g data-mml-node="mo" transform="translate(1110.2,0)"><use data-c="2212" xlink:href="#MJX-2-TEX-N-2212"></use></g><g data-mml-node="mi" transform="translate(2110.4,0)"><use data-c="1D43E" xlink:href="#MJX-2-TEX-I-1D43E"></use></g></g></g></svg> 个红球。同一颜色的球是完全相同的。Alice 和 Bob 在玩这些球。</p>
+<p>首先，Alice 将把 <svg style="vertical-align: 0" xmlns="http://www.w3.org/2000/svg" width="2.009ex" height="1.545ex" role="img" focusable="false" viewBox="0 -683 888 683" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="MJX-3-TEX-I-1D441" d="M234 637Q231 637 226 637Q201 637 196 638T191 649Q191 676 202 682Q204 683 299 683Q376 683 387 683T401 677Q612 181 616 168L670 381Q723 592 723 606Q723 633 659 637Q635 637 635 648Q635 650 637 660Q641 676 643 679T653 683Q656 683 684 682T767 680Q817 680 843 681T873 682Q888 682 888 672Q888 650 880 642Q878 637 858 637Q787 633 769 597L620 7Q618 0 599 0Q585 0 582 2Q579 5 453 305L326 604L261 344Q196 88 196 79Q201 46 268 46H278Q284 41 284 38T282 19Q278 6 272 0H259Q228 2 151 2Q123 2 100 2T63 2T46 1Q31 1 31 10Q31 14 34 26T39 40Q41 46 62 46Q130 49 150 85Q154 91 221 362L289 634Q287 635 234 637Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><use data-c="1D441" xlink:href="#MJX-3-TEX-I-1D441"></use></g></g></g></svg> 个球从左到右排成一排。</p>
+<p>然后，Bob 将收走 <svg style="vertical-align: 0" xmlns="http://www.w3.org/2000/svg" width="2.011ex" height="1.545ex" role="img" focusable="false" viewBox="0 -683 889 683" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="MJX-4-TEX-I-1D43E" d="M285 628Q285 635 228 637Q205 637 198 638T191 647Q191 649 193 661Q199 681 203 682Q205 683 214 683H219Q260 681 355 681Q389 681 418 681T463 682T483 682Q500 682 500 674Q500 669 497 660Q496 658 496 654T495 648T493 644T490 641T486 639T479 638T470 637T456 637Q416 636 405 634T387 623L306 305Q307 305 490 449T678 597Q692 611 692 620Q692 635 667 637Q651 637 651 648Q651 650 654 662T659 677Q662 682 676 682Q680 682 711 681T791 680Q814 680 839 681T869 682Q889 682 889 672Q889 650 881 642Q878 637 862 637Q787 632 726 586Q710 576 656 534T556 455L509 418L518 396Q527 374 546 329T581 244Q656 67 661 61Q663 59 666 57Q680 47 717 46H738Q744 38 744 37T741 19Q737 6 731 0H720Q680 3 625 3Q503 3 488 0H478Q472 6 472 9T474 27Q478 40 480 43T491 46H494Q544 46 544 71Q544 75 517 141T485 216L427 354L359 301L291 248L268 155Q245 63 245 58Q245 51 253 49T303 46H334Q340 37 340 35Q340 19 333 5Q328 0 317 0Q314 0 280 1T180 2Q118 2 85 2T49 1Q31 1 31 11Q31 13 34 25Q38 41 42 43T65 46Q92 46 125 49Q139 52 144 61Q147 65 216 339T285 628Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><use data-c="1D43E" xlink:href="#MJX-4-TEX-I-1D43E"></use></g></g></g></svg> 个蓝球。在一次操作中，他可以收走连续的一个区间的蓝球。他将以最少的操作数收走所有蓝球。</p>
+<p>问: Alice 有多少种排列这 <svg style="vertical-align: 0" xmlns="http://www.w3.org/2000/svg" width="2.009ex" height="1.545ex" role="img" focusable="false" viewBox="0 -683 888 683" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="MJX-5-TEX-I-1D441" d="M234 637Q231 637 226 637Q201 637 196 638T191 649Q191 676 202 682Q204 683 299 683Q376 683 387 683T401 677Q612 181 616 168L670 381Q723 592 723 606Q723 633 659 637Q635 637 635 648Q635 650 637 660Q641 676 643 679T653 683Q656 683 684 682T767 680Q817 680 843 681T873 682Q888 682 888 672Q888 650 880 642Q878 637 858 637Q787 633 769 597L620 7Q618 0 599 0Q585 0 582 2Q579 5 453 305L326 604L261 344Q196 88 196 79Q201 46 268 46H278Q284 41 284 38T282 19Q278 6 272 0H259Q228 2 151 2Q123 2 100 2T63 2T46 1Q31 1 31 10Q31 14 34 26T39 40Q41 46 62 46Q130 49 150 85Q154 91 221 362L289 634Q287 635 234 637Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><use data-c="1D441" xlink:href="#MJX-5-TEX-I-1D441"></use></g></g></g></svg> 个球的方法，使得 Bob <strong>恰好</strong>操作 <svg style="vertical-align: -0.025ex" xmlns="http://www.w3.org/2000/svg" width="0.781ex" height="1.52ex" role="img" focusable="false" viewBox="0 -661 345 672" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="MJX-6-TEX-I-1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><use data-c="1D456" xlink:href="#MJX-6-TEX-I-1D456"></use></g></g></g></svg> 次才能收走所有的 <svg style="vertical-align: 0" xmlns="http://www.w3.org/2000/svg" width="2.011ex" height="1.545ex" role="img" focusable="false" viewBox="0 -683 889 683" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="MJX-7-TEX-I-1D43E" d="M285 628Q285 635 228 637Q205 637 198 638T191 647Q191 649 193 661Q199 681 203 682Q205 683 214 683H219Q260 681 355 681Q389 681 418 681T463 682T483 682Q500 682 500 674Q500 669 497 660Q496 658 496 654T495 648T493 644T490 641T486 639T479 638T470 637T456 637Q416 636 405 634T387 623L306 305Q307 305 490 449T678 597Q692 611 692 620Q692 635 667 637Q651 637 651 648Q651 650 654 662T659 677Q662 682 676 682Q680 682 711 681T791 680Q814 680 839 681T869 682Q889 682 889 672Q889 650 881 642Q878 637 862 637Q787 632 726 586Q710 576 656 534T556 455L509 418L518 396Q527 374 546 329T581 244Q656 67 661 61Q663 59 666 57Q680 47 717 46H738Q744 38 744 37T741 19Q737 6 731 0H720Q680 3 625 3Q503 3 488 0H478Q472 6 472 9T474 27Q478 40 480 43T491 46H494Q544 46 544 71Q544 75 517 141T485 216L427 354L359 301L291 248L268 155Q245 63 245 58Q245 51 253 49T303 46H334Q340 37 340 35Q340 19 333 5Q328 0 317 0Q314 0 280 1T180 2Q118 2 85 2T49 1Q31 1 31 11Q31 13 34 25Q38 41 42 43T65 46Q92 46 125 49Q139 52 144 61Q147 65 216 339T285 628Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><use data-c="1D43E" xlink:href="#MJX-7-TEX-I-1D43E"></use></g></g></g></svg> 个蓝球？对于每个 <svg style="vertical-align: -0.025ex" xmlns="http://www.w3.org/2000/svg" width="0.781ex" height="1.52ex" role="img" focusable="false" viewBox="0 -661 345 672" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="MJX-8-TEX-I-1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><use data-c="1D456" xlink:href="#MJX-8-TEX-I-1D456"></use></g></g></g></svg>（<svg style="vertical-align: -0.312ex" xmlns="http://www.w3.org/2000/svg" width="9.957ex" height="1.857ex" role="img" focusable="false" viewBox="0 -683 4401.1 821" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="MJX-9-TEX-N-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path id="MJX-9-TEX-N-2264" d="M674 636Q682 636 688 630T694 615T687 601Q686 600 417 472L151 346L399 228Q687 92 691 87Q694 81 694 76Q694 58 676 56H670L382 192Q92 329 90 331Q83 336 83 348Q84 359 96 365Q104 369 382 500T665 634Q669 636 674 636ZM84 -118Q84 -108 99 -98H678Q694 -104 694 -118Q694 -130 679 -138H98Q84 -131 84 -118Z"></path><path id="MJX-9-TEX-I-1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path><path id="MJX-9-TEX-I-1D43E" d="M285 628Q285 635 228 637Q205 637 198 638T191 647Q191 649 193 661Q199 681 203 682Q205 683 214 683H219Q260 681 355 681Q389 681 418 681T463 682T483 682Q500 682 500 674Q500 669 497 660Q496 658 496 654T495 648T493 644T490 641T486 639T479 638T470 637T456 637Q416 636 405 634T387 623L306 305Q307 305 490 449T678 597Q692 611 692 620Q692 635 667 637Q651 637 651 648Q651 650 654 662T659 677Q662 682 676 682Q680 682 711 681T791 680Q814 680 839 681T869 682Q889 682 889 672Q889 650 881 642Q878 637 862 637Q787 632 726 586Q710 576 656 534T556 455L509 418L518 396Q527 374 546 329T581 244Q656 67 661 61Q663 59 666 57Q680 47 717 46H738Q744 38 744 37T741 19Q737 6 731 0H720Q680 3 625 3Q503 3 488 0H478Q472 6 472 9T474 27Q478 40 480 43T491 46H494Q544 46 544 71Q544 75 517 141T485 216L427 354L359 301L291 248L268 155Q245 63 245 58Q245 51 253 49T303 46H334Q340 37 340 35Q340 19 333 5Q328 0 317 0Q314 0 280 1T180 2Q118 2 85 2T49 1Q31 1 31 11Q31 13 34 25Q38 41 42 43T65 46Q92 46 125 49Q139 52 144 61Q147 65 216 339T285 628Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mn"><use data-c="31" xlink:href="#MJX-9-TEX-N-31"></use></g><g data-mml-node="mo" transform="translate(777.8,0)"><use data-c="2264" xlink:href="#MJX-9-TEX-N-2264"></use></g><g data-mml-node="mi" transform="translate(1833.6,0)"><use data-c="1D456" xlink:href="#MJX-9-TEX-I-1D456"></use></g><g data-mml-node="mo" transform="translate(2456.3,0)"><use data-c="2264" xlink:href="#MJX-9-TEX-N-2264"></use></g><g data-mml-node="mi" transform="translate(3512.1,0)"><use data-c="1D43E" xlink:href="#MJX-9-TEX-I-1D43E"></use></g></g></g></svg>）计算答案对 <svg style="vertical-align: -0.186ex" xmlns="http://www.w3.org/2000/svg" width="7.147ex" height="2.14ex" role="img" focusable="false" viewBox="0 -864 3159 946" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="MJX-10-TEX-N-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path id="MJX-10-TEX-N-30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"></path><path id="MJX-10-TEX-N-39" d="M352 287Q304 211 232 211Q154 211 104 270T44 396Q42 412 42 436V444Q42 537 111 606Q171 666 243 666Q245 666 249 666T257 665H261Q273 665 286 663T323 651T370 619T413 560Q456 472 456 334Q456 194 396 97Q361 41 312 10T208 -22Q147 -22 108 7T68 93T121 149Q143 149 158 135T173 96Q173 78 164 65T148 49T135 44L131 43Q131 41 138 37T164 27T206 22H212Q272 22 313 86Q352 142 352 280V287ZM244 248Q292 248 321 297T351 430Q351 508 343 542Q341 552 337 562T323 588T293 615T246 625Q208 625 181 598Q160 576 154 546T147 441Q147 358 152 329T172 282Q197 248 244 248Z"></path><path id="MJX-10-TEX-N-2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"></path><path id="MJX-10-TEX-N-37" d="M55 458Q56 460 72 567L88 674Q88 676 108 676H128V672Q128 662 143 655T195 646T364 644H485V605L417 512Q408 500 387 472T360 435T339 403T319 367T305 330T292 284T284 230T278 162T275 80Q275 66 275 52T274 28V19Q270 2 255 -10T221 -22Q210 -22 200 -19T179 0T168 40Q168 198 265 368Q285 400 349 489L395 552H302Q128 552 119 546Q113 543 108 522T98 479L95 458V455H55V458Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msup"><g data-mml-node="mn"><use data-c="31" xlink:href="#MJX-10-TEX-N-31"></use><use data-c="30" xlink:href="#MJX-10-TEX-N-30" transform="translate(500,0)"></use></g><g data-mml-node="mn" transform="translate(1033,393.1) scale(0.707)"><use data-c="39" xlink:href="#MJX-10-TEX-N-39"></use></g></g><g data-mml-node="mo" transform="translate(1658.8,0)"><use data-c="2B" xlink:href="#MJX-10-TEX-N-2B"></use></g><g data-mml-node="mn" transform="translate(2659,0)"><use data-c="37" xlink:href="#MJX-10-TEX-N-37"></use></g></g></g></svg> 取模的结果。</p>
+</div></div>
+        
+    </div>
+  </div>
+  
+  
+  <div class="row">
+    <div class="column">
+        <h4 class="ui top attached block header">输入格式</h4>
+        <div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden; transform: translate3d(0, 0, 0); "><p>输入 <svg style="vertical-align: 0" xmlns="http://www.w3.org/2000/svg" width="2.009ex" height="1.545ex" role="img" focusable="false" viewBox="0 -683 888 683" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="MJX-1-TEX-I-1D441" d="M234 637Q231 637 226 637Q201 637 196 638T191 649Q191 676 202 682Q204 683 299 683Q376 683 387 683T401 677Q612 181 616 168L670 381Q723 592 723 606Q723 633 659 637Q635 637 635 648Q635 650 637 660Q641 676 643 679T653 683Q656 683 684 682T767 680Q817 680 843 681T873 682Q888 682 888 672Q888 650 880 642Q878 637 858 637Q787 633 769 597L620 7Q618 0 599 0Q585 0 582 2Q579 5 453 305L326 604L261 344Q196 88 196 79Q201 46 268 46H278Q284 41 284 38T282 19Q278 6 272 0H259Q228 2 151 2Q123 2 100 2T63 2T46 1Q31 1 31 10Q31 14 34 26T39 40Q41 46 62 46Q130 49 150 85Q154 91 221 362L289 634Q287 635 234 637Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><use data-c="1D441" xlink:href="#MJX-1-TEX-I-1D441"></use></g></g></g></svg> <svg style="vertical-align: 0" xmlns="http://www.w3.org/2000/svg" width="2.011ex" height="1.545ex" role="img" focusable="false" viewBox="0 -683 889 683" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="MJX-2-TEX-I-1D43E" d="M285 628Q285 635 228 637Q205 637 198 638T191 647Q191 649 193 661Q199 681 203 682Q205 683 214 683H219Q260 681 355 681Q389 681 418 681T463 682T483 682Q500 682 500 674Q500 669 497 660Q496 658 496 654T495 648T493 644T490 641T486 639T479 638T470 637T456 637Q416 636 405 634T387 623L306 305Q307 305 490 449T678 597Q692 611 692 620Q692 635 667 637Q651 637 651 648Q651 650 654 662T659 677Q662 682 676 682Q680 682 711 681T791 680Q814 680 839 681T869 682Q889 682 889 672Q889 650 881 642Q878 637 862 637Q787 632 726 586Q710 576 656 534T556 455L509 418L518 396Q527 374 546 329T581 244Q656 67 661 61Q663 59 666 57Q680 47 717 46H738Q744 38 744 37T741 19Q737 6 731 0H720Q680 3 625 3Q503 3 488 0H478Q472 6 472 9T474 27Q478 40 480 43T491 46H494Q544 46 544 71Q544 75 517 141T485 216L427 354L359 301L291 248L268 155Q245 63 245 58Q245 51 253 49T303 46H334Q340 37 340 35Q340 19 333 5Q328 0 317 0Q314 0 280 1T180 2Q118 2 85 2T49 1Q31 1 31 11Q31 13 34 25Q38 41 42 43T65 46Q92 46 125 49Q139 52 144 61Q147 65 216 339T285 628Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><use data-c="1D43E" xlink:href="#MJX-2-TEX-I-1D43E"></use></g></g></g></svg></p>
+</div></div>
+    </div>
+  </div>
+  
+  
+    <div class="row">
+        <div class="column">
+          <h4 class="ui top attached block header">输出格式</h4>
+          <div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden; transform: translate3d(0, 0, 0); "><p>输出 <svg style="vertical-align: 0" xmlns="http://www.w3.org/2000/svg" width="2.011ex" height="1.545ex" role="img" focusable="false" viewBox="0 -683 889 683" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="MJX-1-TEX-I-1D43E" d="M285 628Q285 635 228 637Q205 637 198 638T191 647Q191 649 193 661Q199 681 203 682Q205 683 214 683H219Q260 681 355 681Q389 681 418 681T463 682T483 682Q500 682 500 674Q500 669 497 660Q496 658 496 654T495 648T493 644T490 641T486 639T479 638T470 637T456 637Q416 636 405 634T387 623L306 305Q307 305 490 449T678 597Q692 611 692 620Q692 635 667 637Q651 637 651 648Q651 650 654 662T659 677Q662 682 676 682Q680 682 711 681T791 680Q814 680 839 681T869 682Q889 682 889 672Q889 650 881 642Q878 637 862 637Q787 632 726 586Q710 576 656 534T556 455L509 418L518 396Q527 374 546 329T581 244Q656 67 661 61Q663 59 666 57Q680 47 717 46H738Q744 38 744 37T741 19Q737 6 731 0H720Q680 3 625 3Q503 3 488 0H478Q472 6 472 9T474 27Q478 40 480 43T491 46H494Q544 46 544 71Q544 75 517 141T485 216L427 354L359 301L291 248L268 155Q245 63 245 58Q245 51 253 49T303 46H334Q340 37 340 35Q340 19 333 5Q328 0 317 0Q314 0 280 1T180 2Q118 2 85 2T49 1Q31 1 31 11Q31 13 34 25Q38 41 42 43T65 46Q92 46 125 49Q139 52 144 61Q147 65 216 339T285 628Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><use data-c="1D43E" xlink:href="#MJX-1-TEX-I-1D43E"></use></g></g></g></svg> 行。第 <svg style="vertical-align: -0.025ex" xmlns="http://www.w3.org/2000/svg" width="0.781ex" height="1.52ex" role="img" focusable="false" viewBox="0 -661 345 672" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="MJX-2-TEX-I-1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><use data-c="1D456" xlink:href="#MJX-2-TEX-I-1D456"></use></g></g></g></svg> 行（<svg style="vertical-align: -0.312ex" xmlns="http://www.w3.org/2000/svg" width="9.957ex" height="1.857ex" role="img" focusable="false" viewBox="0 -683 4401.1 821" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="MJX-3-TEX-N-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path id="MJX-3-TEX-N-2264" d="M674 636Q682 636 688 630T694 615T687 601Q686 600 417 472L151 346L399 228Q687 92 691 87Q694 81 694 76Q694 58 676 56H670L382 192Q92 329 90 331Q83 336 83 348Q84 359 96 365Q104 369 382 500T665 634Q669 636 674 636ZM84 -118Q84 -108 99 -98H678Q694 -104 694 -118Q694 -130 679 -138H98Q84 -131 84 -118Z"></path><path id="MJX-3-TEX-I-1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path><path id="MJX-3-TEX-I-1D43E" d="M285 628Q285 635 228 637Q205 637 198 638T191 647Q191 649 193 661Q199 681 203 682Q205 683 214 683H219Q260 681 355 681Q389 681 418 681T463 682T483 682Q500 682 500 674Q500 669 497 660Q496 658 496 654T495 648T493 644T490 641T486 639T479 638T470 637T456 637Q416 636 405 634T387 623L306 305Q307 305 490 449T678 597Q692 611 692 620Q692 635 667 637Q651 637 651 648Q651 650 654 662T659 677Q662 682 676 682Q680 682 711 681T791 680Q814 680 839 681T869 682Q889 682 889 672Q889 650 881 642Q878 637 862 637Q787 632 726 586Q710 576 656 534T556 455L509 418L518 396Q527 374 546 329T581 244Q656 67 661 61Q663 59 666 57Q680 47 717 46H738Q744 38 744 37T741 19Q737 6 731 0H720Q680 3 625 3Q503 3 488 0H478Q472 6 472 9T474 27Q478 40 480 43T491 46H494Q544 46 544 71Q544 75 517 141T485 216L427 354L359 301L291 248L268 155Q245 63 245 58Q245 51 253 49T303 46H334Q340 37 340 35Q340 19 333 5Q328 0 317 0Q314 0 280 1T180 2Q118 2 85 2T49 1Q31 1 31 11Q31 13 34 25Q38 41 42 43T65 46Q92 46 125 49Q139 52 144 61Q147 65 216 339T285 628Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mn"><use data-c="31" xlink:href="#MJX-3-TEX-N-31"></use></g><g data-mml-node="mo" transform="translate(777.8,0)"><use data-c="2264" xlink:href="#MJX-3-TEX-N-2264"></use></g><g data-mml-node="mi" transform="translate(1833.6,0)"><use data-c="1D456" xlink:href="#MJX-3-TEX-I-1D456"></use></g><g data-mml-node="mo" transform="translate(2456.3,0)"><use data-c="2264" xlink:href="#MJX-3-TEX-N-2264"></use></g><g data-mml-node="mi" transform="translate(3512.1,0)"><use data-c="1D43E" xlink:href="#MJX-3-TEX-I-1D43E"></use></g></g></g></svg>）表示有多少种排列这 <svg style="vertical-align: 0" xmlns="http://www.w3.org/2000/svg" width="2.009ex" height="1.545ex" role="img" focusable="false" viewBox="0 -683 888 683" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="MJX-4-TEX-I-1D441" d="M234 637Q231 637 226 637Q201 637 196 638T191 649Q191 676 202 682Q204 683 299 683Q376 683 387 683T401 677Q612 181 616 168L670 381Q723 592 723 606Q723 633 659 637Q635 637 635 648Q635 650 637 660Q641 676 643 679T653 683Q656 683 684 682T767 680Q817 680 843 681T873 682Q888 682 888 672Q888 650 880 642Q878 637 858 637Q787 633 769 597L620 7Q618 0 599 0Q585 0 582 2Q579 5 453 305L326 604L261 344Q196 88 196 79Q201 46 268 46H278Q284 41 284 38T282 19Q278 6 272 0H259Q228 2 151 2Q123 2 100 2T63 2T46 1Q31 1 31 10Q31 14 34 26T39 40Q41 46 62 46Q130 49 150 85Q154 91 221 362L289 634Q287 635 234 637Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><use data-c="1D441" xlink:href="#MJX-4-TEX-I-1D441"></use></g></g></g></svg> 个球的方法，使得 Bob <strong>恰好</strong>操作 <svg style="vertical-align: -0.025ex" xmlns="http://www.w3.org/2000/svg" width="0.781ex" height="1.52ex" role="img" focusable="false" viewBox="0 -661 345 672" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="MJX-5-TEX-I-1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><use data-c="1D456" xlink:href="#MJX-5-TEX-I-1D456"></use></g></g></g></svg> 次才能收走所有的 <svg style="vertical-align: 0" xmlns="http://www.w3.org/2000/svg" width="2.011ex" height="1.545ex" role="img" focusable="false" viewBox="0 -683 889 683" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="MJX-6-TEX-I-1D43E" d="M285 628Q285 635 228 637Q205 637 198 638T191 647Q191 649 193 661Q199 681 203 682Q205 683 214 683H219Q260 681 355 681Q389 681 418 681T463 682T483 682Q500 682 500 674Q500 669 497 660Q496 658 496 654T495 648T493 644T490 641T486 639T479 638T470 637T456 637Q416 636 405 634T387 623L306 305Q307 305 490 449T678 597Q692 611 692 620Q692 635 667 637Q651 637 651 648Q651 650 654 662T659 677Q662 682 676 682Q680 682 711 681T791 680Q814 680 839 681T869 682Q889 682 889 672Q889 650 881 642Q878 637 862 637Q787 632 726 586Q710 576 656 534T556 455L509 418L518 396Q527 374 546 329T581 244Q656 67 661 61Q663 59 666 57Q680 47 717 46H738Q744 38 744 37T741 19Q737 6 731 0H720Q680 3 625 3Q503 3 488 0H478Q472 6 472 9T474 27Q478 40 480 43T491 46H494Q544 46 544 71Q544 75 517 141T485 216L427 354L359 301L291 248L268 155Q245 63 245 58Q245 51 253 49T303 46H334Q340 37 340 35Q340 19 333 5Q328 0 317 0Q314 0 280 1T180 2Q118 2 85 2T49 1Q31 1 31 11Q31 13 34 25Q38 41 42 43T65 46Q92 46 125 49Q139 52 144 61Q147 65 216 339T285 628Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><use data-c="1D43E" xlink:href="#MJX-6-TEX-I-1D43E"></use></g></g></g></svg> 个蓝球，对 <svg style="vertical-align: -0.186ex" xmlns="http://www.w3.org/2000/svg" width="7.147ex" height="2.14ex" role="img" focusable="false" viewBox="0 -864 3159 946" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="MJX-7-TEX-N-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path id="MJX-7-TEX-N-30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"></path><path id="MJX-7-TEX-N-39" d="M352 287Q304 211 232 211Q154 211 104 270T44 396Q42 412 42 436V444Q42 537 111 606Q171 666 243 666Q245 666 249 666T257 665H261Q273 665 286 663T323 651T370 619T413 560Q456 472 456 334Q456 194 396 97Q361 41 312 10T208 -22Q147 -22 108 7T68 93T121 149Q143 149 158 135T173 96Q173 78 164 65T148 49T135 44L131 43Q131 41 138 37T164 27T206 22H212Q272 22 313 86Q352 142 352 280V287ZM244 248Q292 248 321 297T351 430Q351 508 343 542Q341 552 337 562T323 588T293 615T246 625Q208 625 181 598Q160 576 154 546T147 441Q147 358 152 329T172 282Q197 248 244 248Z"></path><path id="MJX-7-TEX-N-2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"></path><path id="MJX-7-TEX-N-37" d="M55 458Q56 460 72 567L88 674Q88 676 108 676H128V672Q128 662 143 655T195 646T364 644H485V605L417 512Q408 500 387 472T360 435T339 403T319 367T305 330T292 284T284 230T278 162T275 80Q275 66 275 52T274 28V19Q270 2 255 -10T221 -22Q210 -22 200 -19T179 0T168 40Q168 198 265 368Q285 400 349 489L395 552H302Q128 552 119 546Q113 543 108 522T98 479L95 458V455H55V458Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msup"><g data-mml-node="mn"><use data-c="31" xlink:href="#MJX-7-TEX-N-31"></use><use data-c="30" xlink:href="#MJX-7-TEX-N-30" transform="translate(500,0)"></use></g><g data-mml-node="mn" transform="translate(1033,393.1) scale(0.707)"><use data-c="39" xlink:href="#MJX-7-TEX-N-39"></use></g></g><g data-mml-node="mo" transform="translate(1658.8,0)"><use data-c="2B" xlink:href="#MJX-7-TEX-N-2B"></use></g><g data-mml-node="mn" transform="translate(2659,0)"><use data-c="37" xlink:href="#MJX-7-TEX-N-37"></use></g></g></g></svg> 取模。</p>
+</div></div>
+        </div>
+    </div>
+  
+  
+    <div class="row">
+        <div class="column">
+          <h4 class="ui top attached block header">样例</h4>
+          <div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden; transform: translate3d(0, 0, 0); "><div style="display: flex; align-items: center;"><div style="font-size: 18px;font-weight: bold"> 输入样例#1</div><div class="mini ui primary button" style="margin-left: 10px">  复制 </div></div>
+<div class="ui existing segment"><pre style="margin-top: 0; margin-bottom: 0; "><code><span class="hl-text hl-plain">5 3
+</span></code></pre></div>
+<div style="display: flex; align-items: center;"><div style="font-size: 18px;font-weight: bold"> 输出样例#1</div><div class="mini ui primary button" style="margin-left: 10px">  复制 </div></div>
+<div class="ui existing segment"><pre style="margin-top: 0; margin-bottom: 0; "><code><span class="hl-text hl-plain">3
+6
+1
+</span></code></pre></div>
+<div style="display: flex; align-items: center;"><div style="font-size: 18px;font-weight: bold"> 输入样例#2</div><div class="mini ui primary button" style="margin-left: 10px">  复制 </div></div>
+<div class="ui existing segment"><pre style="margin-top: 0; margin-bottom: 0; "><code><span class="hl-text hl-plain">2000 3
+</span></code></pre></div>
+<div style="display: flex; align-items: center;"><div style="font-size: 18px;font-weight: bold"> 输出样例#2</div><div class="mini ui primary button" style="margin-left: 10px">  复制 </div></div>
+<div class="ui existing segment"><pre style="margin-top: 0; margin-bottom: 0; "><code><span class="hl-text hl-plain">1998
+3990006
+327341989
+</span></code></pre></div>
+</div></div>
+        </div>
+    </div>
+  
+  
+    <div class="row">
+        <div class="column">
+          <h4 class="ui top attached block header">数据范围与提示</h4>
+          <div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden; transform: translate3d(0, 0, 0); "><ul>
+<li><svg style="vertical-align: -0.312ex" xmlns="http://www.w3.org/2000/svg" width="18.728ex" height="1.857ex" role="img" focusable="false" viewBox="0 -683 8277.7 821" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="MJX-1-TEX-N-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path id="MJX-1-TEX-N-2264" d="M674 636Q682 636 688 630T694 615T687 601Q686 600 417 472L151 346L399 228Q687 92 691 87Q694 81 694 76Q694 58 676 56H670L382 192Q92 329 90 331Q83 336 83 348Q84 359 96 365Q104 369 382 500T665 634Q669 636 674 636ZM84 -118Q84 -108 99 -98H678Q694 -104 694 -118Q694 -130 679 -138H98Q84 -131 84 -118Z"></path><path id="MJX-1-TEX-I-1D43E" d="M285 628Q285 635 228 637Q205 637 198 638T191 647Q191 649 193 661Q199 681 203 682Q205 683 214 683H219Q260 681 355 681Q389 681 418 681T463 682T483 682Q500 682 500 674Q500 669 497 660Q496 658 496 654T495 648T493 644T490 641T486 639T479 638T470 637T456 637Q416 636 405 634T387 623L306 305Q307 305 490 449T678 597Q692 611 692 620Q692 635 667 637Q651 637 651 648Q651 650 654 662T659 677Q662 682 676 682Q680 682 711 681T791 680Q814 680 839 681T869 682Q889 682 889 672Q889 650 881 642Q878 637 862 637Q787 632 726 586Q710 576 656 534T556 455L509 418L518 396Q527 374 546 329T581 244Q656 67 661 61Q663 59 666 57Q680 47 717 46H738Q744 38 744 37T741 19Q737 6 731 0H720Q680 3 625 3Q503 3 488 0H478Q472 6 472 9T474 27Q478 40 480 43T491 46H494Q544 46 544 71Q544 75 517 141T485 216L427 354L359 301L291 248L268 155Q245 63 245 58Q245 51 253 49T303 46H334Q340 37 340 35Q340 19 333 5Q328 0 317 0Q314 0 280 1T180 2Q118 2 85 2T49 1Q31 1 31 11Q31 13 34 25Q38 41 42 43T65 46Q92 46 125 49Q139 52 144 61Q147 65 216 339T285 628Z"></path><path id="MJX-1-TEX-I-1D441" d="M234 637Q231 637 226 637Q201 637 196 638T191 649Q191 676 202 682Q204 683 299 683Q376 683 387 683T401 677Q612 181 616 168L670 381Q723 592 723 606Q723 633 659 637Q635 637 635 648Q635 650 637 660Q641 676 643 679T653 683Q656 683 684 682T767 680Q817 680 843 681T873 682Q888 682 888 672Q888 650 880 642Q878 637 858 637Q787 633 769 597L620 7Q618 0 599 0Q585 0 582 2Q579 5 453 305L326 604L261 344Q196 88 196 79Q201 46 268 46H278Q284 41 284 38T282 19Q278 6 272 0H259Q228 2 151 2Q123 2 100 2T63 2T46 1Q31 1 31 10Q31 14 34 26T39 40Q41 46 62 46Q130 49 150 85Q154 91 221 362L289 634Q287 635 234 637Z"></path><path id="MJX-1-TEX-N-32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path><path id="MJX-1-TEX-N-30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mn"><use data-c="31" xlink:href="#MJX-1-TEX-N-31"></use></g><g data-mml-node="mo" transform="translate(777.8,0)"><use data-c="2264" xlink:href="#MJX-1-TEX-N-2264"></use></g><g data-mml-node="mi" transform="translate(1833.6,0)"><use data-c="1D43E" xlink:href="#MJX-1-TEX-I-1D43E"></use></g><g data-mml-node="mo" transform="translate(3000.3,0)"><use data-c="2264" xlink:href="#MJX-1-TEX-N-2264"></use></g><g data-mml-node="mi" transform="translate(4056.1,0)"><use data-c="1D441" xlink:href="#MJX-1-TEX-I-1D441"></use></g><g data-mml-node="mo" transform="translate(5221.9,0)"><use data-c="2264" xlink:href="#MJX-1-TEX-N-2264"></use></g><g data-mml-node="mn" transform="translate(6277.7,0)"><use data-c="32" xlink:href="#MJX-1-TEX-N-32"></use><use data-c="30" xlink:href="#MJX-1-TEX-N-30" transform="translate(500,0)"></use><use data-c="30" xlink:href="#MJX-1-TEX-N-30" transform="translate(1000,0)"></use><use data-c="30" xlink:href="#MJX-1-TEX-N-30" transform="translate(1500,0)"></use></g></g></g></svg></li>
+</ul>
+</div></div>
+        </div>
+    </div>
+  
+  
+    
+    
+    
+    <div class="row">
+        <div class="column">
+          
+
+            
+            <form target="__iframe" onsubmit="return false" action="http://www.nfls.com.cn:10611/problem/2278/submit?contest_id=&amp;practice_id=&amp;no_jump=true" method="post" id="submit_code" enctype="multipart/form-data">
+            
+
+
+              
+              <input name="language" type="hidden" id="form">
+              <input name="code" type="hidden">
+              <div class="ui grid">
+                <div class="four wide column" style="margin-right: -25px; ">
+                  <div class="ui attached vertical fluid pointing menu" id="languages-menu" style="height: 370px; overflow-y: scroll; overflow-x: hidden; ">
+                    
+                    
+                      <a style="border-radius: 0; " class="item active" data-value="cpp14-noi" data-mode="cpp">
+                        C++ 14
+                        <div class="ui right floated" style="opacity: 0.4; margin-top: 8px; font-size: 0.7em; ">G++ 9.3.0 (NOIP标准环境)</div>
+                      </a>
+                    
+                      <a style="border-radius: 0; " class="item" data-value="python3" data-mode="python">
+                        Python 3
+                        <div class="ui right floated" style="opacity: 0.4; margin-top: 8px; font-size: 0.7em; ">PyPy 7.3.4 (Python 3.7.10)</div>
+                      </a>
+                    
+                  </div>
+                </div>
+                <div class="twelve wide stretched column" style="position: relative; padding-left: 0; margin-left: calc(-1rem - 1px); width: calc(75% + 1rem + 13px) !important; ">
+                  <div id="editor" style="position: absolute; width: 100%; height: calc(100% - 28px); border: 1px solid #D4D4D5; overflow: hidden; " class="editor" contenteditable="" data-keybinding-context="1" data-mode-id="cpp"><div class="monaco-editor no-user-select  vs" data-uri="inmemory://model/1" style="width: 891px; height: 368px;"><div data-mprt="3" class="overflow-guard" style="width: 891px; height: 368px;"><div class="margin" role="presentation" aria-hidden="true" style="position: absolute; will-change: transform; top: 0px; height: 368px; width: 60px;"><div class="glyph-margin" style="left: 0px; width: 0px; height: 368px;"></div><div class="margin-view-zones" role="presentation" aria-hidden="true" style="position: absolute;"></div><div class="margin-view-overlays" role="presentation" aria-hidden="true" style="position: absolute; width: 60px; font-family: &quot;Fira Mono&quot;, &quot;Bitstream Vera Sans Mono&quot;, Menlo, Consolas, &quot;Lucida Console&quot;, &quot;Source Han Sans SC&quot;, &quot;Noto Sans CJK SC&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft Yahei&quot;, monospace; font-weight: normal; font-size: 14px; line-height: 22px; letter-spacing: 0px; height: 368px;"><div style="position:absolute;top:0px;width:100%;height:22px;"><div class="current-line" style="width:60px; height:22px;"></div><div class="line-numbers" style="left:0px;width:34px;">1</div></div></div></div><div class="monaco-scrollable-element editor-scrollable vs" role="presentation" data-mprt="5" style="position: absolute; overflow: hidden; left: 60px; width: 831px; height: 368px;"><div class="lines-content monaco-editor-background" style="position: absolute; overflow: hidden; width: 1e+06px; height: 1e+06px; will-change: transform; top: 0px; left: 0px;"><div class="view-overlays" role="presentation" aria-hidden="true" style="position: absolute; height: 0px; width: 743px;"><div style="position:absolute;top:0px;width:100%;height:22px;"><div class="current-line" style="width:743px; height:22px;"></div></div></div><div role="presentation" aria-hidden="true" class="view-rulers"></div><div class="view-zones" role="presentation" aria-hidden="true" style="position: absolute;"></div><div class="view-lines" role="presentation" aria-hidden="true" data-mprt="7" style="position: absolute; font-family: &quot;Fira Mono&quot;, &quot;Bitstream Vera Sans Mono&quot;, Menlo, Consolas, &quot;Lucida Console&quot;, &quot;Source Han Sans SC&quot;, &quot;Noto Sans CJK SC&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft Yahei&quot;, monospace; font-weight: normal; font-size: 14px; line-height: 22px; letter-spacing: 0px; width: 743px; height: 368px;"><div style="top:0px;height:22px;" class="view-line"><span><span>&nbsp;</span></span></div></div><div data-mprt="1" class="contentWidgets" style="position: absolute; top: 0px;"><div class="lightbulb-glyph" title="Show Fixes (Ctrl+.)" widgetid="LightBulbWidget" style="position: absolute; visibility: hidden; max-width: 743px;"></div></div><div role="presentation" aria-hidden="true" class="cursors-layer cursor-line-style cursor-solid"><div class="cursor " style="height: 22px; top: 0px; left: 0px; font-family: &quot;Fira Mono&quot;, &quot;Bitstream Vera Sans Mono&quot;, Menlo, Consolas, &quot;Lucida Console&quot;, &quot;Source Han Sans SC&quot;, &quot;Noto Sans CJK SC&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft Yahei&quot;, monospace; font-weight: normal; font-size: 14px; line-height: 22px; letter-spacing: 0px; display: block; visibility: hidden; width: 1px;"></div></div></div><div role="presentation" aria-hidden="true" class="invisible scrollbar horizontal" style="position: absolute; width: 743px; height: 10px; left: 0px; bottom: 0px;"><div class="slider" style="position: absolute; top: 0px; left: 0px; height: 10px; will-change: transform; width: 743px;"></div></div><canvas class="decorationsOverviewRuler" aria-hidden="true" width="0" height="368" style="position: absolute; will-change: transform; top: 0px; right: 0px; width: 0px; height: 368px;"></canvas><div role="presentation" aria-hidden="true" class="invisible scrollbar vertical" style="position: absolute; width: 0px; height: 368px; right: 0px; top: 0px;"><div class="slider" style="position: absolute; top: 0px; left: 0px; width: 0px; will-change: transform; height: 368px;"></div></div></div><div role="presentation" aria-hidden="true" style="width: 803px;"></div><textarea data-mprt="6" class="inputarea" wrap="off" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false" aria-label="Editor content;Press Alt+F1 for Accessibility Options." role="textbox" aria-multiline="true" aria-haspopup="false" aria-autocomplete="both" style="font-size: 1px; line-height: 22px; top: 0px; left: 60px; width: 1px; height: 1px;"></textarea><div style="position: absolute; top: 0px; left: 0px; width: 0px; height: 0px;"></div><div data-mprt="4" class="overlayWidgets" style="width: 891px;"><div class="accessibilityHelpWidget" role="dialog" aria-hidden="true" widgetid="editor.contrib.accessibilityHelpWidget" style="display: none; position: absolute;"><div role="document"></div></div></div><div data-mprt="8" class="minimap slider-mouseover" role="presentation" aria-hidden="true" style="position: absolute; left: 803px; width: 88px; height: 368px;"><div class="minimap-shadow-hidden" style="height: 368px;"></div><canvas width="88" height="368" style="position: absolute; left: 0px; width: 88px; height: 368px;"></canvas><canvas class="minimap-decorations-layer" width="88" height="368" style="position: absolute; left: 0px; width: 88px; height: 368px;"></canvas><div class="minimap-slider" style="position: absolute; will-change: transform; width: 88px; height: 33px;"><div class="minimap-slider-horizontal" style="position: absolute; left: 0px; width: 88px; top: 0px; height: 33px;"></div></div></div></div><div data-mprt="2" class="overflowingContentWidgets"><div class="editor-widget suggest-widget" widgetid="editor.widget.suggestWidget" style="position: absolute; visibility: inherit; max-width: 1920px; top: 0px; left: 60px;" monaco-visible-content-widget="true"><div class="message" aria-hidden="true" style="display: none; background-color: rgb(243, 243, 243); border-color: rgb(200, 200, 200);"></div><div class="tree" aria-hidden="true" style="display: none; background-color: rgb(243, 243, 243); border-color: rgb(200, 200, 200);"><div class="monaco-list list_id_1" tabindex="0" role="tree"><div class="monaco-scrollable-element " role="presentation" style="position: relative; overflow: hidden;"><div class="monaco-list-rows" style="overflow: hidden;"></div><div role="presentation" aria-hidden="true" class="invisible scrollbar horizontal" style="position: absolute;"><div class="slider" style="position: absolute; top: 0px; left: 0px; height: 10px; will-change: transform;"></div></div><div role="presentation" aria-hidden="true" class="invisible scrollbar vertical" style="position: absolute;"><div class="slider" style="position: absolute; top: 0px; left: 0px; width: 10px; will-change: transform;"></div></div></div><style type="text/css" media="screen">.monaco-list.list_id_1:focus .monaco-list-row.focused { background-color: #d6ebff; }
+.monaco-list.list_id_1:focus .monaco-list-row.focused:hover { background-color: #d6ebff; }
+.monaco-list.list_id_1:focus .monaco-list-row.selected { background-color: #0069d1; }
+.monaco-list.list_id_1:focus .monaco-list-row.selected:hover { background-color: #0069d1; }
+.monaco-list.list_id_1:focus .monaco-list-row.selected { color: #ffffff; }
+
+				.monaco-drag-image,
+				.monaco-list.list_id_1:focus .monaco-list-row.selected.focused { background-color: #0074e8; }
+			
+
+				.monaco-drag-image,
+				.monaco-list.list_id_1:focus .monaco-list-row.selected.focused { color: #ffffff; }
+			
+.monaco-list.list_id_1 .monaco-list-row.focused { background-color:  #d6ebff; }
+.monaco-list.list_id_1 .monaco-list-row.focused:hover { background-color:  #d6ebff; }
+.monaco-list.list_id_1 .monaco-list-row.selected { background-color:  #e4e6f1; }
+.monaco-list.list_id_1 .monaco-list-row.selected:hover { background-color:  #e4e6f1; }
+.monaco-list.list_id_1:not(.drop-target) .monaco-list-row:hover:not(.selected):not(.focused) { background-color:  #f0f0f0; }
+
+				.monaco-list.list_id_1.drop-target,
+				.monaco-list.list_id_1 .monaco-list-row.drop-target { background-color: #d6ebff !important; color: inherit !important; }
+			
+.monaco-list-type-filter { background-color: #efc1ad }
+.monaco-list-type-filter { border: 1px solid rgba(0, 0, 0, 0); }
+.monaco-list-type-filter.no-matches { border: 1px solid #be1100; }
+.monaco-list-type-filter { box-shadow: 1px 1px 1px #a8a8a8; }</style></div></div><div class="details" aria-hidden="true" style="font-size: 14px; font-weight: normal; display: none; background-color: rgb(243, 243, 243); border-color: rgb(200, 200, 200);"><div class="monaco-scrollable-element " role="presentation" style="position: relative; overflow: hidden;"><div class="body" style="overflow: hidden;"><div class="header"><span class="close" title="Read less... (Ctrl+Space)" style="height: 22px; width: 22px;"></span><p class="type" style="font-family: &quot;Fira Mono&quot;, &quot;Bitstream Vera Sans Mono&quot;, Menlo, Consolas, &quot;Lucida Console&quot;, &quot;Source Han Sans SC&quot;, &quot;Noto Sans CJK SC&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft Yahei&quot;, monospace;"></p></div><p class="docs"></p></div><div role="presentation" aria-hidden="true" class="invisible scrollbar horizontal" style="position: absolute;"><div class="slider" style="position: absolute; top: 0px; left: 0px; height: 10px; will-change: transform;"></div></div><div role="presentation" aria-hidden="true" class="invisible scrollbar vertical" style="position: absolute;"><div class="slider" style="position: absolute; top: 0px; left: 0px; width: 10px; will-change: transform;"></div></div><div class="shadow"></div><div class="shadow"></div><div class="shadow top-left-corner"></div></div></div></div></div><div class="context-view" aria-hidden="true" style="display: none;"></div></div></div>
+                </div>
+                <div class="ui form" style="width: 100%; ">
+                  <div class="inline fields" style="width: 100%; ">
+                    <div class="field" style="margin: 0 auto; ">
+                      <label for="answer">或者，上传代码文件</label>
+                      <input type="file" id="answer" name="answer">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="ui center aligned vertical segment" style="padding-bottom: 0; ">
+                
+                  <button onclick="submit_code()" class="ui labeled icon button"> <i class="ui edit icon"></i>提交</button> 
+                  
+                
+              </div>
+            
+          </form>
+        </div>
+    </div>
+    
+    
+</div>
+
+
+
+<script type="text/javascript">
+  var editor;
+  window.onEditorLoaded(function () {
+    var editorElement = document.getElementById('editor');
+    var content = '';
+    
+    editor = window.createCodeEditor(editorElement, $('#languages-menu .item.active').data('mode'), content);
+    window.editor = editor;
+  });
+
+  var lastSubmitted = '';
+
+  function submit_code() {
+
+    var countElement = document.getElementById('submission-count');
+    if (countElement) {
+      var currentCount = parseInt(countElement.textContent, 10);
+
+      // Decrease count if it is more than 0
+      if (currentCount > 0) {
+        var newCount = currentCount - 1;
+        countElement.textContent = newCount.toString();
+      }
+    }
+
+    if (!$('#submit_code input[name=answer]').val().trim() && !editor.getValue().trim()) return false;
+    $('#submit_code input[name=language]').val($('#languages-menu .item.active').data('value'));
+    lastSubmitted = editor.getValue();
+    $('#submit_code input[name=code]').val(editor.getValue());
+    // console.log($('#submit_code').attr("action"))
+
+    __showCode();
+    setTimeout(() => {
+        document.getElementById('submit_code').submit()
+    }, 10)
+    
+    return false;
+  }
+
+  $('#languages-menu')[0].scrollTop = $('#languages-menu .active')[0].offsetTop - $('#languages-menu')[0].firstElementChild.offsetTop;
+
+  $(function () {
+    $('#languages-menu .item').click(function() {
+      $(this)
+        .addClass('active')
+        .closest('.ui.menu')
+        .find('.item')
+          .not($(this))
+          .removeClass('active')
+      ;
+      monaco.editor.setModelLanguage(editor.getModel(), $(this).data('mode'));
+    });
+  });
+</script>
+
+
+
+<script>
+
+
+// 复制
+const copyToClipboardAsync = async (str, $button) => {
+    $button.attr('disabled', 'true').removeClass('primary').addClass('positive')
+    const org = $button.text()
+    setTimeout(() => {
+        $button.removeAttr("disabled").removeClass('positive').addClass('primary')
+        $button.text(org)
+    }, 1000)
+    copyToClip(str);
+    $button.text('复制成功')
+};
+$(document).ready(() => {
+    $('div .hl-text,.hl-plain').each((idx, domEle) => {
+        const $example = $(domEle).parent().parent().parent().prev()
+        if(!$example.is('h3')) {
+            return
+        }
+        const text = $(domEle).text()
+        const $button = $("<div class='mini ui primary button' style='margin-left: 10px'>  复制 </div>")
+        $button.click(() => copyToClipboardAsync(text, $button))
+        const $div = $("<div></div>").css('display', 'flex').css('align-items', 'center')
+        $div.append($("<div style='font-size: 18px;font-weight: bold'> " + $example.text() + "</div>")).append($button)
+        $example.replaceWith($div)
+    })
+})
+</script>
+
+
+
+
+<div class="ui modal" id="__modal" style="width: 80%;height: 84%;">
+
+
+    <div class="header" id="forCode" style="display: none;">
+        <div> 代码 </div>
+        <a style="margin-left: 5px;text-decoration:underline"> # </a>
+    </div>
+
+    <div class="header" id="forList" style="display: none"> 提交列表 </div>
+
+
+    <div class="header" style="" id="forBoth">
+        <div>
+            <div id="ListHeader" class="ui checkbox" style="display: flex; align-items: center">
+                <input id="ListType" type="checkbox" onchange="__showList()">
+                <label style="font-size: 16px">我的提交</label>
+                <a style="margin-left: 5px;text-decoration:underline"> # </a>
+            </div>
+            <div id="CodeHeader" style="font-size: 16px; display: none;text-decoration: underline">
+                <a href="javascript:;" onclick="__showList()"> 查看提交列表 </a>
+                <a id="__a" style="margin-left: 5px;text-decoration:underline"> # </a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="content" style="height: 88%">
+        <iframe name="__iframe" id="__iframe" width="100%" height="100%" style="border: medium none" src="./A. 红球和蓝球 - NOIP2023-div2模拟赛28 - 比赛 - NFLSOJ_files/saved_resource.html"></iframe>
+    </div>
+    <div class="actions">
+        <button class="ui cancel button primary"> 关闭 </button>
+    </div>
+</div>
+
+<script>
+let __type = 0
+let __getListLink = undefined
+let __getCodeLink = undefined
+let $iframe = $('#__iframe')
+let _iframe = $iframe.get(0)
+_iframe.addEventListener('load', function() {
+    // console.log("load")
+    var tagEle = _iframe.contentDocument.body;
+    if (tagEle) {
+        tagEle.style.display = 'none';
+        tagEle.style.visibility = 'hidden';
+        requestAnimationFrame(function(){
+            tagEle.style.display = 'block';
+            tagEle.style.visibility = 'visible';
+        })
+    }
+})
+
+function initModal(type, getListLink = undefined, getCodeLink = undefined) { // 0  forCode  , 1 forList  ,  2 forBoth
+    __type = type
+    if(type !== 0) $('#forCode').hide()
+    if(type === 1) $('#forList').show()
+    else if(type === 2) $('#forBoth').show()
+
+    __getListLink = getListLink
+    __getCodeLink = getCodeLink
+}
+
+function __showSubmissionList(link, username=undefined) {
+    if(link.indexOf('?') === -1) link += '?'; else link += '&'
+    if(username && username !== '') {
+        link += 'submitter=' + username + '&'
+    }
+    $('#ListHeader a').attr('href', link)
+    link += 'no_jump=true'
+    __show_iframe(link)
+    $('#__modal').modal('show');
+}
+
+async function __prepareForBothModal(AtList = false) {
+    if(AtList) {
+        $('#ListHeader').show()
+        $('#CodeHeader').hide()
+    } else {
+        $('#CodeHeader').show()
+        $('#ListHeader').hide()
+    }
+}
+
+function __showCode(event = undefined, link = undefined, username = undefined) {
+    if(link === undefined && __getCodeLink) link = __getCodeLink()
+    if (event && event.ctrlKey) {
+        window.open(link, '_blank');
+        return;
+    }
+    if(__type === 0) {
+        if(link !== undefined) $('#forCode a').attr('href', link);
+        if(username)  $('#forCode div').text(username)
+    } else { // __type = 2
+        __prepareForBothModal(false)
+        if(link !== undefined) $('#__a').attr('href', link);
+    }
+    $('#__modal').modal('show');
+    if(link !== undefined) {
+        if(link.indexOf('?') === -1) link += '?'; else link += '&'
+        link += 'no_jump=true'
+        __show_iframe(link)
+    }
+}
+
+function __showList(link = undefined) {
+    let username = undefined
+    if(__type === 2) {
+        __prepareForBothModal(true);
+        // forSelf = $('#ListType').is(":checked")
+        if($('#ListType').is(":checked")) username = 'zzc'
+    }
+    if(link === undefined && __getListLink) link = __getListLink()
+    if(link !== undefined) __showSubmissionList(link, username)
+}
+
+function __show_iframe(link) {
+    if(link) {
+       $iframe.attr('src', link)
+        // setTimeout(() => $('#__iframe').attr('src', link), 10)
+    }
+}
+</script>
+
+<script>
+function getListLink() {
+    
+
+    let link = "/submissions?problem_id=2278"
+    return link;
+}
+initModal(2, getListLink)
+window['showSubmission'] = (event, link) => __showCode(event, link)
+</script>
+</div>
+    <div class="ui vertical footer segment" style="margin-top: 15px; ">
+      <div class="ui center aligned container">
+        <span style="color: #999;">NFLSOJ Powered by <a href="https://github.com/syzoj/syzoj" target="_blank">SYZOJ</a>.</span>
+      </div>
+    </div>
+</div>
+<script data-cfasync="false" src="./A. 红球和蓝球 - NOIP2023-div2模拟赛28 - 比赛 - NFLSOJ_files/semantic.min.js.下载"></script>
+<script src="./A. 红球和蓝球 - NOIP2023-div2模拟赛28 - 比赛 - NFLSOJ_files/Chart.bundle.min.js.下载"></script>
+<script src="./A. 红球和蓝球 - NOIP2023-div2模拟赛28 - 比赛 - NFLSOJ_files/script.js.下载"></script>
+
+
+
+<div class="monaco-aria-container"><div class="monaco-alert" role="alert" aria-atomic="true"></div><div class="monaco-status" role="status" aria-atomic="true"></div></div></body></html>

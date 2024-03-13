@@ -1,0 +1,72 @@
+#include<cstdio>
+#include<iostream>
+#include<cstring>
+#include<queue>
+#include<stack>
+#include<algorithm>
+#include<map>
+#include<unordered_map>
+
+#include<bitset>
+#include<set>
+
+#include<deque>
+#include<cassert>
+#include<cstdlib>
+#include<cmath>
+#include<ctime>
+#include<vector>
+#include<random>
+
+#define fi first
+#define se second
+#define pb push_back
+#define mk make_pair
+#define DBG cerr << __LINE__ << ' ' << __FUNCTION__ << endl
+
+#define DRE default_random_engine
+#define UID uniform_int_distribution
+#define y0 Y0
+#define y1 Y1
+
+#define pi acos(-1)
+#define eps (1e-8)
+
+using namespace std;
+
+const int INF = 0x3f3f3f3f;
+typedef pair<int,int> PII;
+typedef pair<int,PII> PIII;
+const int N = 3e5 + 10;
+const int M = 5e6;
+
+vector<int> v[N];
+int n,q,fa[N],siz[N],mx[N],ans[N];
+
+void dfs(int x){
+	siz[x]=1;
+	for(int y:v[x]){
+		dfs(y);
+		siz[x]+=siz[y], mx[x]=max(mx[x],siz[y]);
+	}
+	for(int y:v[x]){
+		int c=ans[y];
+		while(c!=x&&max(mx[c],siz[x]-siz[c])*2>siz[x])	c=fa[c];
+		if(max(mx[c],siz[x]-siz[c])*2<=siz[x]){ ans[x]=c; break;}
+	}
+}
+
+signed main(){
+    ios::sync_with_stdio(false);
+    cin.tie(0), cout.tie(0);
+    cin>>n>>q;
+    for(int i=2;i<=n;++i)	cin>>fa[i], v[fa[i]].pb(i);
+    for(int i=1;i<=n;++i)	ans[i]=i;
+    dfs(1);
+    while(q--){
+    	int x; cin>>x;
+    	cout<<ans[x]<<endl;
+	}
+    return 0;
+}
+
