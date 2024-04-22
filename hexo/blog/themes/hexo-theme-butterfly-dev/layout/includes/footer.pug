@@ -1,0 +1,37 @@
+#footer-wrap
+  if theme.footer.owner.enable
+    - var now = new Date()
+    - var nowYear = now.getFullYear()
+    if theme.footer.owner.since && theme.footer.owner.since != nowYear
+      .copyright!= `&copy;${theme.footer.owner.since} - ${nowYear} By ${config.author}`
+    else
+      .copyright!= `&copy;${nowYear} By ${config.author}`
+  if theme.footer.copyright
+    .framework-info
+      span= _p('footer.framework') + ' '
+      a(href='https://hexo.io')= 'Hexo'
+      span.footer-separator |
+      span= _p('footer.theme') + ' '
+      a(href='https://github.com/jerryc127/hexo-theme-butterfly')= 'Butterfly'
+  if theme.footer.custom_text
+    .footer_custom_text!=`${theme.footer.custom_text}`
+#footer-banner
+      .footer-banner-links
+        .footer-banner-left
+          span#footer-banner-tips
+          script(type='text/javascript', src='https://cdn.bootcss.com/typed.js/2.0.5/typed.js')
+          script(type='text/javascript').
+            
+            var typed = new Typed("#footer-banner-tips", {
+                        strings: ['你会发现世界新的尽头，下雨会有彩色的洋流，珊瑚里有被浇灌的梦，街角有海獭等着你的糖球','可是啊，我却，却愿意去相信，最渺小最温柔最柔软最无畏的你','借一方三九天里咧咧暖阳，熔这茫茫人间刺骨凉','也路过，旋转的星空；发现光颜色万种，风吹来云在翻涌，都抵不过你的笑容','我也想，能陪你一起走啊，直到这世界崩塌。可是啊，走过长夜的你，不再需要被牵挂','有些遗憾要学会放下，生活无需太重的行囊','既然相遇始终来自于时光的馈赠，那么离别时也一定要微笑着回忆放心中','可以哭了，可以笑着说结束了','也敬你一杯，因为值得','一定是你来时太小心，怕我再想起你','无名的人啊，我敬你一杯酒，敬你的沉默，和每一声怒吼','我不再迷茫，思念是唯一的方向。满天的星光，有一颗是你的愿望。','May all the bueaty be blessed.'],
+                        startDelay: 200,
+                        backDelay: 2000,
+                        typeSpeed: 100,
+                        loop: true,
+                        backSpeed: 20
+                        })
+            
+        .footer-banner-right
+          a.footer-banner-link(href='/rss/', data-pjax-state) 订阅
+          a.footer-banner-link(href='/update/', data-pjax-state) 主题
+          a.footer-banner-link(href='https://www.beian.miit.gov.cn/', target='_blank') 粤 ICP 备 20043865 号

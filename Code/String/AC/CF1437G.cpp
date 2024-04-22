@@ -52,7 +52,7 @@ namespace AC{
 	void query(char c[]);
 }
 namespace ST{
-	int maxx[N];
+	int maxx[N<<2];
 	void update(int p,int l,int r,int x,int k);
 	int query(int p,int l,int r,int left,int right);
 }
@@ -64,7 +64,9 @@ namespace TC{
 }
 
 void ST::update(int p,int l,int r,int x,int k){
-	if(l==r){ maxx[x]=k; return ;}
+	// DBG;
+	// cout<<p<<" "<<l<<" "<<r<<" "<<x<<" "<<k<<endl;
+	if(l==r){ maxx[p]=k; return ;}
 	int mid=l+r>>1;
 	if(x<=mid)	update(p<<1,l,mid,x,k);
 	else	update(p<<1|1,mid+1,r,x,k);
@@ -81,16 +83,17 @@ int ST::query(int p,int l,int r,int left,int right){
 void AC::insert(char c[]){
 	int len=strlen(c), p=1;
 	for(int i=0;i<len;++i)
-		p=(t[p][c[i]-'a'])?(t[p][c[i-'a']]):(t[p][c[i]-'a']=++idx);
-	flag[p] = ++cnt, tag[cnt] = p; exist[N]=true;
+		p=(t[p][c[i]-'a'])?(t[p][c[i]-'a']):(t[p][c[i]-'a']=++idx);
+	flag[p] = ++cnt, tag[cnt] = p; exist[p]=true;
 }
-queue<int> q;
 void AC::build(){
 	for(int i=0;i<26;++i)
 		if(t[1][i])	q.push(t[1][i]), fail[t[1][i]]=1;
+		else	t[1][i]=1;
 	fail[1]=1;
 	while(q.size()){
 		int p=q.front(); q.pop();
+		// cout<<p<<" ";
 		for(int i=0;i<26;++i)
 			if(t[p][i])	fail[t[p][i]]=t[fail[p]][i], q.push(t[p][i]);
 			else	t[p][i]=t[fail[p]][i];
@@ -105,6 +108,7 @@ void AC::query(char c[]){
 		p=t[p][c[i]-'a'];
 		exi|=exist[p];
 		ans=max(ans,TC::query(p));
+		// cout<<ans<<endl;
 	}
 	if(exi)	cout<<ans<<endl;
 	else	cout<<-1<<endl;
@@ -128,13 +132,25 @@ void TC::dfs2(int x,int tp){
 }
 int TC::query(int x){
 	int ans=0;
+	// DBG;
+	// cout<<"###"<<x<<"###"<<endl;
 	while(top[x]!=1){
-		ans=max(ans,ST::query(1,1,AC::idx,dfn[top[x]],dfn[x]));
+		ans=max(ans,ST::query(1,1,TC::idx,dfn[top[x]],dfn[x]));
+		// cout<<dfn[top[x]]<<" "<<dfn[x]<<endl;
 		x=fa[top[x]];
 	}
-	return max(ans,ST::query(1,1,AC::idx,1,dfn[x]));
+	// cout<<ans<<endl;
+	return max(ans,ST::query(1,1,TC::idx,1,dfn[x]));
 }
 
+void print(int p,int l,int r){
+	if(l==r)	return;
+	cout<<p<<" "<<l<<" "<<r<<" "<<ST::maxx[p]<<endl;
+	int mid=l+r>>1;
+	print(p<<1,l,mid), print(p<<1|1,mid+1,r);
+}
+
+priority_queue<PII> q[N];
 int main(){
 	ios::sync_with_stdio(false);
 	cin.tie(0), cout.tie(0);
@@ -142,17 +158,33 @@ int main(){
 	for(int i=1;i<=n;++i)
 		cin>>c, AC::insert(c);
 	AC::build();
+	// cout<<endl;
+	// for(int i=1;i<=AC::idx;++i){
+	// 	cout<<i<<" ";
+	// 	for(int j=0;j<26;++j)
+	// 		cout<<AC::t[i][j]<<" ";
+	// 	cout<<endl;
+	// }
+	// cout<<endl;
 	TC::dfs1(1,0), TC::dfs2(1,1);
 	while(m--){
 		cin>>op;
 		if(op==1){
 			int x,y;
 			cin>>x>>y;
-			ST::update(1,1,AC::idx,TC::dfn[AC::tag[x]],y);
+			int pos=TC::dfn[AC::tag[x]];
+			while(q[pos].size()&&q[pos].top().se==x)	q[pos].pop();
+			q[pos].push(mk(y,x));
+			ST::update(1,1,TC::idx,pos,q[pos].top().fi);
+			// cout<<x<<" "<<AC::tag[x]<<" "<<TC::dfn[AC::tag[x]]<<" "<<y<<endl;
 		}else{
 			cin>>c;
 			AC::query(c);
 		}
+		// for(int i=1;i<=TC::idx<<1;++i)
+		// 	cout<<ST::maxx[i]<<" ";
+		// cout<<endl;
+		// print(1,1,TC::idx);
 	}
 	return 0;
 }

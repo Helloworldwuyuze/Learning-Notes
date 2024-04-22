@@ -6,8 +6,10 @@
         "unicodeHighlight.on": true  //新增配置项
     },
     "files.associations": {
-        "iostream": "cpp",
-        "ostream": "cpp",
-        "iosfwd": "cpp"
-    }
+		"iostream": "cpp",
+		"ostream": "cpp",
+		"iosfwd": "cpp",
+		"cmath": "cpp",
+		"cstdlib": "cpp"
+	}
 }
