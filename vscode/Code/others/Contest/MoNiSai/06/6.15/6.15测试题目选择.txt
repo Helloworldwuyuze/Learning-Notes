@@ -1,0 +1,9 @@
+A.#3662. 「JOI 2022 Final」星际蛋糕推销 P8160 [JOI 2022 Final] 星际蛋糕 (Intercastellar) （橙）
+B.P2294 [HNOI2005] 狡猾的商人  （绿）（并查集，差分约束，前缀和）
+C.P1279 字串距离 （绿）（DP）
+D.CF855B Marvolo Gaunt's Ring （1500）（黄）
+E.P1353 [USACO08JAN] Running S （绿）（DP）
+F.P3177 [HAOI2015] 树上染色 （蓝）（树上DP）
+G.#2558. 「LNOI2014」LCA  P4211 [LNOI2014] LCA （紫）（树链剖分 线段树  LCA）
+H.弱化版：CF1401E Divide Square （2400）（蓝）（并查集）
+I.强化版：#2760. 「JOI 2014 Final」裁剪线 洛谷：AT_joi2014ho5 （紫）（set 并查集 扫描线 离散化 线段树）

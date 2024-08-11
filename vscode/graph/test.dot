@@ -1,0 +1,12 @@
+digraph example{
+	rankdir = UD
+	node[shape = circle]
+	1->2[color = aquamarine]
+	1->3[color = aquamarine]
+	3->4[color = aquamarine]
+	3->5[color = aquamarine]
+	4->6[color = aquamarine]
+	1->6[color = blueviolet]
+	3->2[color = coral]
+	6->3[color = darkgoldenrod]
+}
